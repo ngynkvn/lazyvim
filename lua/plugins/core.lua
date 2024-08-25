@@ -16,6 +16,7 @@ return {
       colorscheme = "catppuccin",
     },
   },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
   -- Lazy
   -- {
   --   "crnvl96/lazydocker.nvim",
