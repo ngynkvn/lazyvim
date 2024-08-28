@@ -60,6 +60,7 @@ return {
         end, "gopls")
         -- end workaround
       end,
+      cssls = function(_, opts) end,
     },
   },
 }
