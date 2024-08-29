@@ -8,8 +8,8 @@ return {
   { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.tbl_extend("keep", opts.ensure_installed, {
         "prettier",
         "gofumpt",
         "goimports",
@@ -24,8 +24,8 @@ return {
         "taplo",
         "vtsls",
         "yaml-language-server",
-      },
-    },
+      })
+    end,
   },
   -- Lazy
   -- {
