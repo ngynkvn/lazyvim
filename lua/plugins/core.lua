@@ -6,6 +6,27 @@ return {
     },
   },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "prettier",
+        "gofumpt",
+        "goimports",
+        "gopls",
+        "js-debug-adapter",
+        "json-lsp",
+        "lua-language-server",
+        "pyright",
+        "ruff",
+        "shfmt",
+        "stylua",
+        "taplo",
+        "vtsls",
+        "yaml-language-server",
+      },
+    },
+  },
   -- Lazy
   -- {
   --   "crnvl96/lazydocker.nvim",
