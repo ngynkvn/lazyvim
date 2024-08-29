@@ -1,13 +1,5 @@
 return {
-  {
-    "alker0/chezmoi.vim",
-    lazy = false,
-    init = function()
-      -- This option is required.
-      vim.g["chezmoi#use_tmp_buffer"] = true
-      -- add other options here if needed.
-    end,
-  },
+  -- https://github.com/alker0/chezmoi.vim?tab=readme-ov-file#-can-i-use-nvim-treesitter-for-my-chezmoi-template
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
