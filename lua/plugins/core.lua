@@ -56,9 +56,21 @@ return {
     "otavioschwanck/arrow.nvim",
     opts = {
       show_icons = true,
-      leader_key = ";", -- Recommended to be a single key
+      leader_key = "<leader>h", -- Recommended to be a single key
       buffer_leader_key = "m", -- Per Buffer Mappings
     },
+  },
+  -- God that was so fucking hard to figure out
+  {
+    "folke/which-key.nvim",
+    ---@module 'folke/which-key.nvim'
+    ---@param opts wk.Opts
+    opts = function(_, opts)
+      table.insert(opts.spec, {
+        "<leader>h",
+        desc = "Arrow",
+      })
+    end,
   },
   -- Lazy
   -- {
