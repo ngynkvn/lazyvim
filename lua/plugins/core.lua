@@ -6,15 +6,6 @@ return {
     },
   },
   {
-    "stevearc/oil.nvim",
-    opts = {
-      default_file_explorer = false,
-    },
-    -- Optional dependencies
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
-    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
-  },
-  {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
     lazy = true,
@@ -80,5 +71,14 @@ return {
   --   dependencies = {
   --     "MunifTanjim/nui.nvim",
   --   },
+  -- },
+  -- {
+  --   "stevearc/oil.nvim",
+  --   opts = {
+  --     default_file_explorer = false,
+  --   },
+  --   -- Optional dependencies
+  --   dependencies = { { "echasnovski/mini.icons", opts = {} } },
+  --   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   -- },
 }
