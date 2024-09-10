@@ -2,7 +2,16 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = function()
+        local cs = require("catppuccin")
+        cs.setup({
+          flavour = "mocha",
+          custom_highlights = function(c)
+            return { WinSeparator = { fg = c.surface1 } }
+          end,
+        })
+        cs.load()
+      end,
     },
   },
   {
@@ -63,7 +72,7 @@ return {
   -- God that was so fucking hard to figure out
   {
     "folke/which-key.nvim",
-    ---@module 'folke/which-key.nvim'
+    ---@module 'which-key'
     ---@param opts wk.Opts
     opts = function(_, opts)
       table.insert(opts.spec, {
