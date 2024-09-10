@@ -10,7 +10,7 @@ return {
           event = "notify",
           kind = "info",
           any = {
-            { find = "hidden" },
+            { find = "Toggling hidden files" },
           },
         },
         opts = { skip = true },
