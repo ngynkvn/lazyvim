@@ -4,6 +4,16 @@ return {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
       opts.servers.gopls.settings.gopls.analyses.fieldalignment = false
+      opts.servers.tailwindcss.root_dir = function(fname)
+        local root_pattern =
+          require("lspconfig").util.root_pattern("tailwind.config.cjs", "tailwind.config.js", "postcss.config.js")
+        return root_pattern(fname)
+      end
+      -- opts.servers.graphql.root_dir = function(fname)
+      --   -- TODO: This is probably not correct
+      --   local root_pattern = require("lspconfig").util.root_pattern(".graphql")
+      --   return root_pattern(fname)
+      -- end
       return opts
     end,
   },
