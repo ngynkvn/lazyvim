@@ -12,10 +12,10 @@ return {
           event = "notify",
           kind = "info",
           any = {
-            { find = "Toggling hidden files" },
+            { find = "%[Neo%-tree %u+%]" },
           },
         },
-        opts = { skip = true },
+        view = "mini",
       },
     })
   end,
