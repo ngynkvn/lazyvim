@@ -1,10 +1,12 @@
 return {
   "folke/noice.nvim",
+  ---@module 'noice'
+  ---@param opts NoiceConfig
   opts = function(_, opts)
     opts.lsp.signature = {
       auto_open = { enabled = false },
     }
-    opts.routes = {
+    vim.list_extend(opts.routes, {
       {
         filter = {
           event = "notify",
@@ -15,6 +17,6 @@ return {
         },
         opts = { skip = true },
       },
-    }
+    })
   end,
 }
