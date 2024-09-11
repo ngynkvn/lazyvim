@@ -2,17 +2,10 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        gopls = {
-          settings = {
-            analyses = {
-              fieldalignment = false,
-            },
-          },
-        },
-      },
-    },
+    opts = function(_, opts)
+      opts.servers.gopls.settings.gopls.analyses.fieldalignment = false
+      return opts
+    end,
   },
   -- Obsidian
   -- {
