@@ -8,3 +8,5 @@ vim.opt.relativenumber = false
 vim.opt.autoread = true
 -- disable neovim generating a swapfile and showing the error
 vim.opt.swapfile = false
+
+vim.g.zig_fmt_autosave = false
