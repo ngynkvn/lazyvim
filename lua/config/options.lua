@@ -9,4 +9,7 @@ vim.opt.autoread = true
 -- disable neovim generating a swapfile and showing the error
 vim.opt.swapfile = false
 
+-- don't show parse errors in a separate window
+vim.g.zig_fmt_parse_errors = false
+-- disable format-on-save from `ziglang/zig.vim`
 vim.g.zig_fmt_autosave = false
