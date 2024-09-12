@@ -8,7 +8,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        zls = {},
+        zls = { mason = false },
       },
     },
   },
