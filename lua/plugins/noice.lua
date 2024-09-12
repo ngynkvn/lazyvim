@@ -9,10 +9,15 @@ return {
     vim.list_extend(opts.routes, {
       {
         filter = {
-          event = "notify",
-          kind = "info",
+          event = { "notify", "msg_show" },
+          -- NOTE: Lua pattern matching: https://www.lua.org/pil/20.2.html
           any = {
+            -- Filter Neo-tree notifications
             { find = "%[Neo%-tree %u+%]" },
+            -- lazy.nvim warning
+            { find = "# Config Change Detected." },
+            -- %d yanked messages
+            { find = "%d+ lines yanked" },
           },
         },
         view = "mini",
