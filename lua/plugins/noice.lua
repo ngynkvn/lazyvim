@@ -18,6 +18,8 @@ return {
             { find = "# Config Change Detected." },
             -- %d yanked messages
             { find = "%d+ lines yanked" },
+            -- deleted lines
+            { find = "%d+ fewer lines" },
           },
         },
         view = "mini",
