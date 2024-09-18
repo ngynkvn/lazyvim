@@ -1,3 +1,8 @@
+if true then
+  return { import = "lazyvim.plugins.extras.lang.typescript" }
+end
+
+-- TODO: broken
 return {
   {
     "pmizio/typescript-tools.nvim",
