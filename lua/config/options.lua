@@ -8,6 +8,8 @@ vim.opt.relativenumber = false
 vim.opt.autoread = true
 -- disable neovim generating a swapfile and showing the error
 vim.opt.swapfile = false
+-- popup max height
+vim.opt.pumheight = 0
 
 -- don't show parse errors in a separate window
 vim.g.zig_fmt_parse_errors = false
