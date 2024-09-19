@@ -28,6 +28,7 @@ return {
     opts = function(_, opts)
       table.insert(opts.spec, {
         "<leader>h",
+        icon = { cat = "filetype", name = "harpoon" },
         desc = "Arrow",
       })
     end,
