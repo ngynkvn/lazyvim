@@ -1,19 +1,4 @@
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = function()
-        local cs = require("catppuccin")
-        cs.setup({
-          flavour = "mocha",
-          custom_highlights = function(c)
-            return { WinSeparator = { fg = c.surface1 } }
-          end,
-        })
-        cs.load()
-      end,
-    },
-  },
   -- Import subdirectories
   { import = "plugins.lang" },
   { "folke/trouble.nvim", opts = { max_items = false } },
