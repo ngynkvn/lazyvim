@@ -33,25 +33,13 @@ return {
       })
     end,
   },
-  -- Lazy
-  -- {
-  --   "crnvl96/lazydocker.nvim",
-  --   event = "VeryLazy",
-  --   keys = {
-  --     { "\\\\", ":LazyDocker<CR>", desc = "Open lazydocker" },
-  --   },
-  --   opts = {}, -- automatically calls `require("lazydocker").setup()`
-  --   dependencies = {
-  --     "MunifTanjim/nui.nvim",
-  --   },
-  -- },
-  -- {
-  --   "stevearc/oil.nvim",
-  --   opts = {
-  --     default_file_explorer = false,
-  --   },
-  --   -- Optional dependencies
-  --   dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  --   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
-  -- },
+  {
+    "stevearc/oil.nvim",
+    cmd = "Oil",
+    opts = {
+      default_file_explorer = false,
+    },
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+  },
 }
