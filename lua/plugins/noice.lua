@@ -7,7 +7,17 @@ return {
       auto_open = { enabled = false },
     }
     vim.list_extend(opts.routes, {
+      -- TODO: This needs a better place to live. It spams notifications
+      -- Don't know if Noice allows rate limiting
       {
+        view = "mini",
+        filter = {
+          event = { "notify", "msg_show" },
+          find = "%(mini%.align%)",
+        },
+      },
+      {
+        view = "mini",
         filter = {
           event = { "notify", "msg_show" },
           -- NOTE: Lua pattern matching: https://www.lua.org/pil/20.2.html
@@ -22,7 +32,6 @@ return {
             { find = "%d+ fewer lines" },
           },
         },
-        view = "mini",
       },
     })
   end,

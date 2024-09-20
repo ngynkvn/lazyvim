@@ -19,6 +19,10 @@ return {
       leader_key = "<leader>h", -- Recommended to be a single key
       buffer_leader_key = "m", -- Per Buffer Mappings
     },
+    keys = {
+      { "<leader>h", nil, "n" },
+      { "m", nil, "n" },
+    },
   },
   -- God that was so fucking hard to figure out
   {
