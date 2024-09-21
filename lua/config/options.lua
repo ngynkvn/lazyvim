@@ -15,3 +15,9 @@ vim.opt.pumheight = 0
 vim.g.zig_fmt_parse_errors = false
 -- disable format-on-save from `ziglang/zig.vim`
 vim.g.zig_fmt_autosave = false
+
+vim.filetype.add({
+  extension = {
+    tmpl = "gotmpl",
+  },
+})
