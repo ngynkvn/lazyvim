@@ -2,7 +2,14 @@
 local go = {
   {
     "neovim/nvim-lspconfig",
-    opts = { servers = { gopls = { settings = { gopls = { analyses = { fieldalignment = false } } } } } },
+    opts = {
+      servers = {
+        gopls = {
+          settings = { gopls = { analyses = { fieldalignment = false } } },
+          filetypes = { "go", "gomod", "gowork" },
+        },
+      },
+    },
   },
 }
 -- lang.typescript.lua --
