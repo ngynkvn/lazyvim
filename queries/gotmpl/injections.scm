@@ -1,3 +1,3 @@
 ((text) @injection.content
-  (#set! injection.language "sh")
+  (#inject-go-tmpl!)
   (#set! injection.combined))
