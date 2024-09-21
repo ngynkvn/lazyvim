@@ -1,19 +1,13 @@
 return {
   { "ngynkvn/gotmpl.nvim", opts = {} },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
+  { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
+    -- NOTE: Keys are setup by plugin.
     "otavioschwanck/arrow.nvim",
-    opts = {
-      show_icons = true,
-      leader_key = "<leader>h", -- Recommended to be a single key
-      buffer_leader_key = "m", -- Per Buffer Mappings
-    },
-    -- Keys are setup by plugin.
-    keys = {
-      { "<leader>h", nil, "n" },
-      { "m", nil, "n" },
-    },
+    opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
+    keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } },
   },
   -- God that was so fucking hard to figure out
   {
