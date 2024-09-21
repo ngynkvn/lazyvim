@@ -8,6 +8,19 @@ return {
     }
     vim.list_extend(opts.routes, {
       {
+        view = "notify",
+        filter = {
+          event = "msg_show",
+          kind = "echo",
+          find = "%(mini%.align%)",
+        },
+        opts = {
+          title = "MiniAlign",
+          timeout = 5000,
+          replace = true,
+        },
+      },
+      {
         view = "mini",
         filter = {
           event = { "notify", "msg_show" },
