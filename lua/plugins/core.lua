@@ -1,17 +1,5 @@
 return {
-  -- Import subdirectories
-  { import = "plugins.lang" },
-  { "folke/trouble.nvim", opts = { max_items = false } },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      window = {
-        position = "right",
-        width = 28,
-      },
-    },
-  },
   {
     "otavioschwanck/arrow.nvim",
     opts = {
@@ -19,6 +7,7 @@ return {
       leader_key = "<leader>h", -- Recommended to be a single key
       buffer_leader_key = "m", -- Per Buffer Mappings
     },
+    -- Keys are setup by plugin.
     keys = {
       { "<leader>h", nil, "n" },
       { "m", nil, "n" },
