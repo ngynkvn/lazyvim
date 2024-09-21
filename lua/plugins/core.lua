@@ -1,4 +1,5 @@
 return {
+  { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
   {
     "otavioschwanck/arrow.nvim",
