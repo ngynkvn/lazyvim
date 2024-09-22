@@ -9,6 +9,15 @@ return {
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
     keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } },
   },
+  {
+    "project_nvim",
+    opts = function(_, opts)
+      vim.api.nvim_create_user_command("AddProject", function()
+        require("project_nvim.project").add_project_manually()
+      end, {})
+      return opts
+    end,
+  },
   -- God that was so fucking hard to figure out
   {
     "folke/which-key.nvim",
