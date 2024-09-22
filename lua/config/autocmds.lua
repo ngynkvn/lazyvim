@@ -11,4 +11,26 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
     vim.lsp.buf.format()
   end,
+  desc = "Auto format on save",
+})
+
+-- Turn on relative numbering when in visual mode
+local relnum_augroup = vim.api.nvim_create_augroup("relnum", {})
+vim.api.nvim_create_autocmd({ "ModeChanged" }, {
+  group = relnum_augroup,
+  pattern = "*:[V\x16]*",
+  callback = function()
+    vim.wo.relativenumber = vim.wo.number
+  end,
+  desc = "Show relative line numbers",
+})
+
+vim.api.nvim_create_autocmd({ "ModeChanged" }, {
+  group = relnum_augroup,
+  pattern = "[V\x16]*:*",
+  -- Hide relative numbers when neither linewise/blockwise mode is on
+  callback = function()
+    vim.wo.relativenumber = string.find(vim.fn.mode(), "^[V\22]") ~= nil
+  end,
+  desc = "Hide relative line numbers",
 })
