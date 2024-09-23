@@ -13,11 +13,6 @@ vim.opt.pumheight = 0
 -- Preferred textwidth
 vim.opt.textwidth = 100
 
--- don't show parse errors in a separate window
-vim.g.zig_fmt_parse_errors = false
--- disable format-on-save from `ziglang/zig.vim`
-vim.g.zig_fmt_autosave = false
-
 vim.filetype.add({
   pattern = {
     [".*%.[eg]?bnf"] = "ebnf",

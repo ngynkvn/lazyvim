@@ -28,7 +28,5 @@ return {
     },
   },
   -- ui.trouble.lua
-  -- Import subdirectories, and allow wrapping
-  { "folke/trouble.nvim", opts = { max_items = false, win = { wo = { wrap = false } } } },
-  -- end --
+  { "folke/trouble.nvim", opts = { max_items = false } },
 }
