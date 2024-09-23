@@ -23,12 +23,12 @@ return {
     opts = {
       window = {
         position = "right",
-        width = 16,
+        width = 18,
       },
     },
   },
   -- ui.trouble.lua
   -- Import subdirectories, and allow wrapping
-  { "folke/trouble.nvim", opts = { max_items = false, win = { wo = { wrap = true } } } },
+  { "folke/trouble.nvim", opts = { max_items = false, win = { wo = { wrap = false } } } },
   -- end --
 }
