@@ -6,6 +6,8 @@ return {
     opts.lsp.signature = {
       auto_open = { enabled = false },
     }
+    -- NOTE: For the 'find' definitions
+    -- Lua pattern matching: https://www.lua.org/pil/20.2.html
     vim.list_extend(opts.routes, {
       {
         view = "notify",
@@ -16,7 +18,7 @@ return {
         },
         opts = {
           title = "MiniAlign",
-          timeout = 5000,
+          timeout = 2000,
           replace = true,
         },
       },
@@ -24,7 +26,6 @@ return {
         view = "mini",
         filter = {
           event = { "notify", "msg_show" },
-          -- NOTE: Lua pattern matching: https://www.lua.org/pil/20.2.html
           any = {
             -- Filter Neo-tree notifications
             { find = "%[Neo%-tree %u+%]" },

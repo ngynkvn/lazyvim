@@ -1,24 +1,25 @@
+local Config = {}
+
 -- lang.go.lua --
-local go = {
+local gopls = {
+  settings = { gopls = { analyses = { fieldalignment = false } } },
+  filetypes = { "go", "gomod", "gowork" },
+}
+vim.list_extend(Config, {
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        gopls = {
-          settings = { gopls = { analyses = { fieldalignment = false } } },
-          filetypes = { "go", "gomod", "gowork" },
-        },
-      },
-    },
+    opts = { servers = { gopls = gopls } },
   },
-}
+})
+
 -- lang.typescript.lua --
-local typescript = {}
 if true then
-  typescript = { import = "lazyvim.plugins.extras.lang.typescript" }
+  vim.list_extend(Config, {
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+  })
 else
-  -- TODO: broken
-  typescript = {
+  vim.list_extend(Config, {
+    -- TODO: broken
     {
       "pmizio/typescript-tools.nvim",
       dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -27,23 +28,25 @@ else
     {
       "echasnovski/mini.icons",
       opts = {
+        -- stylua: ignore
         file = {
-          [".eslintrc.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
-          [".node-version"] = { glyph = "", hl = "MiniIconsGreen" },
-          [".prettierrc"] = { glyph = "", hl = "MiniIconsPurple" },
-          [".yarnrc.yml"] = { glyph = "", hl = "MiniIconsBlue" },
-          ["eslint.config.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
-          ["package.json"] = { glyph = "", hl = "MiniIconsGreen" },
-          ["tsconfig.json"] = { glyph = "", hl = "MiniIconsAzure" },
-          ["tsconfig.build.json"] = { glyph = "", hl = "MiniIconsAzure" },
-          ["yarn.lock"] = { glyph = "", hl = "MiniIconsBlue" },
+          [".eslintrc.js"]        = { glyph = "󰱺", hl = "MiniIconsYellow" },
+          [".node-version"]       = { glyph = "", hl = "MiniIconsGreen"  },
+          [".prettierrc"]         = { glyph = "", hl = "MiniIconsPurple" },
+          [".yarnrc.yml"]         = { glyph = "", hl = "MiniIconsBlue"   },
+          ["eslint.config.js"]    = { glyph = "󰱺", hl = "MiniIconsYellow" },
+          ["package.json"]        = { glyph = "", hl = "MiniIconsGreen"  },
+          ["tsconfig.json"]       = { glyph = "", hl = "MiniIconsAzure"  },
+          ["tsconfig.build.json"] = { glyph = "", hl = "MiniIconsAzure"  },
+          ["yarn.lock"]           = { glyph = "", hl = "MiniIconsBlue"   },
         },
       },
     },
-  }
+  })
 end
+
 -- lang.zig.lua --
-local zig = {
+vim.list_extend(Config, {
   {
     "nvim-treesitter/nvim-treesitter",
     init = function()
@@ -58,10 +61,7 @@ local zig = {
     "neovim/nvim-lspconfig",
     opts = { servers = { zls = { mason = false } } },
   },
-}
+})
+
 -- lang.lua --
-local C = {}
-vim.list_extend(C, go)
-vim.list_extend(C, typescript)
-vim.list_extend(C, zig)
-return C
+return Config
