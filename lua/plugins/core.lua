@@ -2,7 +2,6 @@ return {
   { "ngynkvn/gotmpl.nvim", opts = {} },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
   { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
-  { "mrjones2014/legendary.nvim", priority = 10000, lazy = false, dependencies = { "kkharji/sqlite.lua" } },
   {
     "otavioschwanck/arrow.nvim",
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
