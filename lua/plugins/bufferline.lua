@@ -2,9 +2,12 @@ return {
   {
     "akinsho/bufferline.nvim",
     version = "*",
-    opts = {
-      options = { always_show_bufferline = true },
-    },
+    opts = function(_, opts)
+      local options = opts.options
+      options.always_show_bufferline = true
+      options.offsets = {}
+      return opts
+    end,
   },
   {
     "tiagovla/scope.nvim",
