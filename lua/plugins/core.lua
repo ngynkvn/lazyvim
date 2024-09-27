@@ -2,9 +2,8 @@ return {
   { "ngynkvn/gotmpl.nvim", opts = {} },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
   { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
-  { "akinsho/git-conflict.nvim", version = "*", config = true },
+  { "mrjones2014/legendary.nvim", priority = 10000, lazy = false, dependencies = { "kkharji/sqlite.lua" } },
   {
-    -- NOTE: Keys are setup by plugin.
     "otavioschwanck/arrow.nvim",
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
     keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } },
@@ -19,26 +18,16 @@ return {
       return opts
     end,
   },
-  -- God that was so fucking hard to figure out
+  { "justinsgithub/wezterm-types" },
   {
-    "folke/which-key.nvim",
-    ---@module 'which-key'
-    ---@param opts wk.Opts
-    opts = function(_, opts)
-      table.insert(opts.spec, {
-        "<leader>h",
-        icon = { cat = "filetype", name = "harpoon" },
-        desc = "Arrow",
-      })
-    end,
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = { { path = "wezterm-types", mods = { "wezterm" } } },
   },
   {
     "stevearc/oil.nvim",
     cmd = "Oil",
-    opts = {
-      default_file_explorer = false,
-    },
-    -- Optional dependencies
+    opts = { default_file_explorer = false },
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
   },
 }
