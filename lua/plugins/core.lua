@@ -24,11 +24,13 @@ return {
       return opts
     end,
   },
-  { "justinsgithub/wezterm-types" },
+  { "justinsgithub/wezterm-types", lazy = true },
   {
     "folke/lazydev.nvim",
     ft = "lua",
-    opts = { { path = "wezterm-types", mods = { "wezterm" } } },
+    opts = function(_, opts)
+      vim.list_extend(opts.library, { { path = "wezterm-types", mods = { "wezterm" } } })
+    end,
   },
   {
     "stevearc/oil.nvim",
