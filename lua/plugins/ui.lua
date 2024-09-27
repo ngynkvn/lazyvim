@@ -10,13 +10,6 @@ return {
   --{ "lualine.nvim", opts = {}, },
   {
     "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      window = {
-        position = "float",
-        mappings = {
-          ["/"] = function() end,
-        },
-      },
-    },
+    opts = { window = { position = "float" } },
   },
 }
