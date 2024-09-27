@@ -12,8 +12,10 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "right",
-        width = 20,
+        position = "float",
+        mappings = {
+          ["/"] = function() end,
+        },
       },
     },
   },
