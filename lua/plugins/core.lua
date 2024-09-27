@@ -5,7 +5,14 @@ return {
   {
     "otavioschwanck/arrow.nvim",
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
-    keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } },
+    keys = function()
+      local keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } }
+      require("which-key").add({
+        { "<leader>h", icon = { cat = "filetype", name = "harpoon" }, desc = "Arrow Marks" },
+        { "m", icon = { cat = "filetype", name = "harpoon" }, desc = "Arrow Buffer Marks" },
+      })
+      return keys
+    end,
   },
   {
     "project.nvim",
