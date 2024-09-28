@@ -11,7 +11,7 @@ vim.opt.swapfile = false
 -- popup max height
 vim.opt.pumheight = 0
 -- Preferred textwidth
-vim.opt.textwidth = 100
+vim.opt.textwidth = 80
 
 vim.filetype.add({
   pattern = {
