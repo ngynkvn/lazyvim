@@ -1,5 +1,6 @@
 return {
   { "ngynkvn/gotmpl.nvim", opts = {} },
+  { "folke/tokyonight.nvim", enabled = true, opts = { style = "night", transparent = true } },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
   { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
   {
