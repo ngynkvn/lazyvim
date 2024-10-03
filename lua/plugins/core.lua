@@ -14,16 +14,6 @@ return {
       return keys
     end,
   },
-  {
-    "project.nvim",
-    opts = function(_, opts)
-      vim.api.nvim_create_user_command("AddProject", function()
-        require("project_nvim.project").add_project_manually()
-        vim.notify("Added " .. vim.fn.expand("%:p:h", true) .. " as project")
-      end, {})
-      return opts
-    end,
-  },
   { "justinsgithub/wezterm-types", lazy = true },
   {
     "folke/lazydev.nvim",
