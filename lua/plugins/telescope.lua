@@ -18,11 +18,15 @@ return {
   opts = {
     defaults = {
       mappings = {
-        n = {
-          ["H"] = "preview_scrolling_left",
-          ["J"] = "preview_scrolling_down",
-          ["K"] = "preview_scrolling_up",
-          ["L"] = "preview_scrolling_right",
+        i = {
+          ["<C-u>"] = false,
+          ["<C-d>"] = false,
+          ["<C-f>"] = false,
+          ["<C-b>"] = false,
+          ["<C-h>"] = "preview_scrolling_left",
+          ["<C-j>"] = "preview_scrolling_down",
+          ["<C-k>"] = "preview_scrolling_up",
+          ["<C-l>"] = "preview_scrolling_right",
         },
       },
     },
