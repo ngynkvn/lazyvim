@@ -27,6 +27,8 @@ return {
           ["<C-j>"] = "preview_scrolling_down",
           ["<C-k>"] = "preview_scrolling_up",
           ["<C-l>"] = "preview_scrolling_right",
+          ["<C-Down>"] = "cycle_history_next" and false, -- Dunno what this does yet
+          ["<C-Up>"] = "cycle_history_prev" and false,
         },
       },
     },
