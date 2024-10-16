@@ -6,9 +6,7 @@ return {
     opts.lsp.signature = {
       auto_open = { enabled = false },
     }
-    opts.presets = {
-      lsp_doc_border = true,
-    }
+    opts.presets.lsp_doc_border = true
     -- NOTE: For the 'find' definitions
     -- Lua pattern matching: https://www.lua.org/pil/20.2.html
     vim.list_extend(opts.routes, {
