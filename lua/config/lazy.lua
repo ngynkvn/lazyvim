@@ -48,8 +48,8 @@ require("lazy").setup({
       disabled_plugins = {
         -- "matchit",
         -- "matchparen",
+        --"netrwPlugin",
         "gzip",
-        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

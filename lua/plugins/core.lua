@@ -27,7 +27,15 @@ return {
   {
     "stevearc/oil.nvim",
     cmd = "Oil",
-    opts = { default_file_explorer = false },
+    opts = {
+      default_file_explorer = false,
+      columns = {
+        "icon",
+        "permissions",
+        "size",
+        "mtime",
+      },
+    },
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
   },
 }
