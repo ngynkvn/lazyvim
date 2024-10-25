@@ -1,4 +1,11 @@
-local Config = {}
+local Config = {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = false },
+    },
+  },
+}
 
 -- lang.go.lua --
 local gopls = {
