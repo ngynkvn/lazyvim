@@ -17,27 +17,7 @@ return {
     version = false, -- wait till new 0.7.0 release to put it back on semver
     event = "VimEnter",
     opts = function()
-      local logo = table.concat({
-        "         ⡈⢀⠰⠠⠤⠢⠌⠄⠐⢀⠠⠡⢈⠬⣂⠉⠠⠐⠈⠂⠁⠆⠐⠒⠄⢀⠂⢃⠄⢄⠉⠆⠈⠅⠠⠄⠠⠅⠂   ",
-        "                                                   ",
-        "⢂                       ⢀ ⡠⢠ ⢂⢄⠂⠠⢄⡀⡀               ",
-        "⢃                    ⣀⢠⠒⠅⠨⢒ ⠧⢀ ⢃⠄ ⠤⠂⠐⠠             ",
-        "⠉                ⢀ ⠲⠄⡂⠡⠐⠈⠁⠁⠒⠄ ⠂ ⠠ ⠉⠐ ⠅⠠⢁           ",
-        "⠄               ⠔⠌⠃⠄⢁⠐ ⠁⠁⠁  ⢈ ⠁ ⡀  ⡀   ⠄⠠          ",
-        "⢈            ⣀⢘⠉⡀⠂⡑⢈⠠⠐⠈     ⠄⠁        ⠠  ⠐         ",
-        "⠅           ⡐⠁⠂⠠⢀⠂⡀⠂      ⠐⠈ ⠐   ⡀       ⠅         ",
-        "⡐         ⠠⠈⠠⠁⠠⠁⡐⢐⡐     ⠐⠆⢀              ⠠         ",
-        "⠂         ⠌⡁⠐⢀ ⠡⢈⠬⣂⢀⠄⠄⠊⠂            ⠈    ⠂         ",
-        "⠉        ⠰ ⠄  ⠈ ⠐  ⠉  ⠐     ⠈          ⠂           ",
-        "⢀        ⠢  ⠈  ⠂  ⠁    ⢀       ⢀       ⢀⠄          ",
-        "⡀        ⠌ ⠂ ⢀    ⡀                                ",
-        "⡀        ⠠⢀              ⡀        ⠂                ",
-        "⠆            ⠠    ⢀                ⠆               ",
-        "⠄          ⠁               ⠄                       ",
-        "⠂             ⠈     ⠂       ⠐                      ",
-        "⠈                    ⠈                             ",
-        "                                                   ",
-      }, "\n")
+      local logo = require("artifacts.misc")[1]
       local _section = function(name, action, section)
         return { name = name, action = action, section = section }
       end
