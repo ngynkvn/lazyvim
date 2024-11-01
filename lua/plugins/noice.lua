@@ -11,17 +11,9 @@ return {
     -- Lua pattern matching: https://www.lua.org/pil/20.2.html
     vim.list_extend(opts.routes, {
       {
-        view = "notify",
-        filter = {
-          event = "msg_show",
-          kind = "echo",
-          find = "%(mini%.align%)",
-        },
-        opts = {
-          title = "MiniAlign",
-          timeout = 2000,
-          replace = true,
-        },
+        view = "mini",
+        filter = { event = "msg_show", kind = "echo", find = "%(mini%.align%)" },
+        opts = { skip = true },
       },
       {
         view = "mini",
