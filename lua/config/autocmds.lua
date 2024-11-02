@@ -34,3 +34,7 @@ vim.api.nvim_create_autocmd({ "ModeChanged" }, {
   end,
   desc = "Hide relative line numbers",
 })
+
+---------------------------------------------------------------------------------
+
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#ffffff" })
