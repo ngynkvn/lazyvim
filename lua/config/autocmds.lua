@@ -35,6 +35,16 @@ vim.api.nvim_create_autocmd({ "ModeChanged" }, {
   desc = "Hide relative line numbers",
 })
 
+vim.opt.fillchars = {
+  horiz = "━",
+  vert = "┃", -- alternatives "│" "┃" "▕"
+  horizdown = "┳",
+  horizup = "┻",
+  vertleft = "┫",
+  vertright = "┣",
+  verthoriz = "╋",
+}
+
 ---------------------------------------------------------------------------------
 
-vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#ffffff" })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#d1f1d1" })
