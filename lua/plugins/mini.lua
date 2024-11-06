@@ -12,7 +12,7 @@ return {
     "echasnovski/mini.starter",
     event = "VimEnter",
     opts = function()
-      local logo = require("artifacts.misc")[1]
+      local logo = require("artifacts.misc")
       local _section = function(name, action, section)
         return { name = name, action = action, section = section }
       end
