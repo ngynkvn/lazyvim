@@ -1,6 +1,7 @@
 return {
   {
-    "hrsh7th/nvim-cmp",
+    "iguanacucumber/magazine.nvim",
+    name = "nvim-cmp",
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -64,4 +65,11 @@ return {
       })
     end,
   },
+  --* the sources *--
+  { "iguanacucumber/mag-nvim-lsp", name = "cmp-nvim-lsp", opts = {} },
+  { "iguanacucumber/mag-nvim-lua", name = "cmp-nvim-lua" },
+  { "iguanacucumber/mag-buffer", name = "cmp-buffer" },
+  { "iguanacucumber/mag-cmdline", name = "cmp-cmdline" },
+
+  "https://codeberg.org/FelipeLema/cmp-async-path", -- not by me, but better than cmp-path
 }
