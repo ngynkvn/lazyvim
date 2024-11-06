@@ -15,27 +15,28 @@ return {
       local _section = function(name, action, section)
         return { name = name, action = action, section = section }
       end
-
       local starter = require("mini.starter")
-    --stylua: ignore
-    local config = {
-      evaluate_single = true,
-      header = logo,
-      items = {
+      local items = {
         starter.sections.recent_files(5, true, true)(),
-        _section("Find file",       LazyVim.pick(),                        "Telescope"),
-        _section("Config",          LazyVim.pick.config_files(),           "Config"),
-        _section("Search text",     LazyVim.pick("live_grep"),             "Telescope"),
-        _section("Lazy",            "Lazy",                                "Config"),
-        _section("New file",        "ene | startinsert",                   "Built-in"),
-        _section("Quit",            "qa",                                  "Built-in"),
+        _section("Find file", LazyVim.pick(), "Telescope"),
+        _section("Config", LazyVim.pick.config_files(), "Config"),
+        _section("Search text", LazyVim.pick("live_grep"), "Telescope"),
+        _section("Lazy", "Lazy", "Config"),
+        _section("New file", "ene | startinsert", "Built-in"),
+        _section("Quit", "qa", "Built-in"),
         _section("Restore session", [[lua require("persistence").load()]], "Session"),
-      },
-      content_hooks = {
-        starter.gen_hook.adding_bullet("░ ", true),
-        starter.gen_hook.aligning("center", "center"),
-      },
-    }
+      }
+
+      local config = {
+        evaluate_single = true,
+        header = logo,
+        items = items,
+        content_hooks = {
+          starter.gen_hook.adding_bullet("░ ", true),
+          starter.gen_hook.aligning("center", "center"),
+        },
+        query_updaters = "abcdefghijklmnopqrstuvwxyz0123456789_-.",
+      }
       return config
     end,
     config = function(_, config)

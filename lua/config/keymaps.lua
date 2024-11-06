@@ -10,3 +10,26 @@ vim.api.nvim_create_user_command("CopyPath", function()
   vim.fn.setreg("+", path)
   vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, { desc = "Copy buffer path to clipboard" })
+
+vim.api.nvim_create_user_command("LspAction", function(opts)
+  vim.lsp.buf.code_action({
+    context = {
+      only = { opts.args },
+    },
+  })
+end, {
+  nargs = "?",
+  complete = function()
+    -- Common code action kinds
+    return {
+      "quickfix",
+      "refactor",
+      "refactor.extract",
+      "refactor.inline",
+      "refactor.rewrite",
+      "source",
+      "source.organizeImports",
+      "source.fixAll",
+    }
+  end,
+})

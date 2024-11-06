@@ -9,8 +9,8 @@ vim.opt.pumheight = 0
 -- Preferred textwidth
 vim.opt.textwidth = 120
 
-vim.opt.winblend = 4
-vim.opt.pumblend = 4
+vim.opt.winblend = 10
+vim.opt.pumblend = 10
 
 vim.filetype.add({
   pattern = {
