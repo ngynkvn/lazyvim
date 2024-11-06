@@ -4,6 +4,7 @@ return {
     opts = {
       mappings = {
         start_with_preview = "ga",
+        start = nil,
       },
     },
   },

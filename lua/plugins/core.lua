@@ -1,7 +1,5 @@
 return {
   { "ngynkvn/gotmpl.nvim", opts = {} },
-  { "folke/tokyonight.nvim", enabled = true, opts = { style = "night", transparent = true } },
-  --{ "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
   { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
   {
     "otavioschwanck/arrow.nvim",
@@ -15,14 +13,13 @@ return {
       return keys
     end,
   },
-  { "justinsgithub/wezterm-types", lazy = true },
   {
     "folke/lazydev.nvim",
     ft = "lua",
     cmd = "LazyDev",
-    opts = function(_, opts)
-      vim.list_extend(opts.library, { { path = "wezterm-types", mods = { "wezterm" } } })
-    end,
+    library = {
+      "LazyVim",
+    },
   },
   {
     "stevearc/oil.nvim",

@@ -7,11 +7,11 @@ return {
       opts.window = {
         completion = {
           border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
+          winhighlight = "Normal:CmpPmenu,CmpBorder:FloatBorder,PmenuSel:CursorLine,Search:None",
         },
         documentation = {
           border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
+          winhighlight = "Normal:CmpPmenu,CmpBorder:FloatBorder,PmenuSel:CursorLine,Search:None",
         },
       }
 

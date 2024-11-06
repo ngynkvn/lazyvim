@@ -44,7 +44,3 @@ vim.opt.fillchars = {
   vertright = "┣",
   verthoriz = "╋",
 }
-
----------------------------------------------------------------------------------
-
-vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#d1f1d1" })
