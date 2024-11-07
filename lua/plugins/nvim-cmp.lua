@@ -48,6 +48,13 @@ return {
             fallback()
           end
         end, { "i", "s" }),
+        ["<C-h>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.close()
+          else
+            fallback()
+          end
+        end),
         ["<C-j>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
@@ -58,6 +65,13 @@ return {
         ["<C-k>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
+          else
+            fallback()
+          end
+        end),
+        ["<C-l>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.confirm()
           else
             fallback()
           end

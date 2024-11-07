@@ -1,4 +1,3 @@
----@module "tokyonight"
 return {
   -- only for editing
   { "rktjmp/lush.nvim", cmd = { "LushImport", "LushRunTutorial", "Lushify" } },
@@ -8,15 +7,16 @@ return {
     enabled = true,
     opts = {
       style = "night",
-      transparent = true,
+      --transparent = true,
 
       --- You can override specific highlights to use other groups or a hex color
       --- function will be called with a Highlights and ColorScheme table
+      ---@module "tokyonight"
       ---@param highlights tokyonight.Highlights
-      ---@param colors ColorScheme
-      on_highlights = function(highlights, colors)
-        colors.bg = ""
+      on_highlights = function(highlights, _)
         highlights.WinSeparator = { fg = "#817ca8" }
+        highlights.Normal = {}
+        highlights.NormalNC = {}
       end,
     },
   },
