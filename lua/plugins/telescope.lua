@@ -12,7 +12,6 @@ M.find_command = function()
     return { "where", "/r", ".", "*" }
   end
 end
-
 return {
   "nvim-telescope/telescope.nvim",
   opts = {
@@ -41,5 +40,16 @@ return {
         hidden = true,
       },
     },
+  },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    version = "^1.0.0",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      local telescope = require("telescope")
+      telescope.load_extension("live_grep_args")
+    end,
   },
 }
