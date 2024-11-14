@@ -1,10 +1,8 @@
 return {
   {
-    "iguanacucumber/magazine.nvim",
-    name = "nvim-cmp",
+    "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
-      local cmp = require("cmp")
       opts.window = {
         completion = {
           border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
@@ -22,6 +20,7 @@ return {
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
+      local cmp = require("cmp")
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -51,6 +50,10 @@ return {
         ["<C-h>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.close()
+          elseif vim.snippet.active({ direction = -1 }) then
+            vim.schedule(function()
+              vim.snippet.jump(-1)
+            end)
           else
             fallback()
           end
@@ -72,6 +75,10 @@ return {
         ["<C-l>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.confirm()
+          elseif vim.snippet.active({ direction = 1 }) then
+            vim.schedule(function()
+              vim.snippet.jump(1)
+            end)
           else
             fallback()
           end
@@ -79,11 +86,4 @@ return {
       })
     end,
   },
-  --* the sources *--
-  { "iguanacucumber/mag-nvim-lsp", name = "cmp-nvim-lsp", opts = {} },
-  { "iguanacucumber/mag-nvim-lua", name = "cmp-nvim-lua" },
-  { "iguanacucumber/mag-buffer", name = "cmp-buffer" },
-  { "iguanacucumber/mag-cmdline", name = "cmp-cmdline" },
-
-  "https://codeberg.org/FelipeLema/cmp-async-path", -- not by me, but better than cmp-path
 }
