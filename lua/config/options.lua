@@ -9,8 +9,8 @@ vim.opt.pumheight = 0
 -- Preferred textwidth
 vim.opt.textwidth = 120
 
-vim.opt.winblend = 10
-vim.opt.pumblend = 10
+--vim.opt.winblend = 10
+--vim.opt.pumblend = 10
 
 vim.filetype.add({
   pattern = {
@@ -19,13 +19,13 @@ vim.filetype.add({
 })
 
 -- https://github.com/nvim-treesitter/nvim-treesitter/issues/5751#issuecomment-2311310008
-require("vim.treesitter.query").set(
-  "markdown",
-  "highlights",
-  [[
-;From MDeiml/tree-sitter-markdown
-[
-  (fenced_code_block_delimiter)
-] @punctuation.delimiter
-]]
-)
+-- require("vim.treesitter.query").set(
+--   "markdown",
+--   "highlights",
+--   [[
+-- ;From MDeiml/tree-sitter-markdown
+-- [
+--   (fenced_code_block_delimiter)
+-- ] @punctuation.delimiter
+-- ]]
+-- )
