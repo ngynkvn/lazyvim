@@ -101,5 +101,9 @@ local M = {
   (_)                     (_)
   ]],
 }
--- Return flavor of the day
-return M.Bonsai
+local keyset = {}
+for k in pairs(M) do
+  table.insert(keyset, k)
+end
+-- Return random image
+return M[keyset[math.random(#keyset)]]
