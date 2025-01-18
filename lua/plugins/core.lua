@@ -1,8 +1,9 @@
 return {
-  { "ngynkvn/gotmpl.nvim", opts = {} },
+  { "ngynkvn/gotmpl.nvim", opts = {}, lazy = true },
   { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
   {
     "otavioschwanck/arrow.nvim",
+    -- TODO: make this lazy
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
     keys = function()
       local keys = { { "<leader>h", nil, "n" }, { "m", nil, "n" } }
@@ -17,16 +18,12 @@ return {
     "folke/lazydev.nvim",
     ft = "lua",
     cmd = "LazyDev",
-    library = {
-      "LazyVim",
-    },
+    library = { "LazyVim" },
   },
   {
     "stevearc/oil.nvim",
-    lazy = true,
-    cmd = "Oil",
     opts = {
-      default_file_explorer = false,
+      default_file_explorer = true,
       columns = {
         "icon",
         "permissions",
@@ -43,11 +40,14 @@ return {
     -- ft = "markdown",
     -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
     event = {
+      --
+      -- NOTE:
       --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
       --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
       --   -- refer to `:h file-pattern` for more examples
       --   "BufReadPre path/to/my-vault/*.md",
       --   "BufNewFile path/to/my-vault/*.md",
+      --
       "BufReadPre "
         .. vim.fn.expand("~")
         .. "/obsidian/**/*.md",
@@ -55,8 +55,6 @@ return {
     dependencies = {
       -- Required.
       "nvim-lua/plenary.nvim",
-
-      -- see below for full list of optional dependencies 👇
     },
     opts = {
       workspaces = {
@@ -65,7 +63,6 @@ return {
           path = "~/obsidian",
         },
       },
-      -- see below for full list of options 👇
     },
   },
 }
