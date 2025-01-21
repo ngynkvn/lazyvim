@@ -1,10 +1,11 @@
 return {
   -- only for editing
   { "rktjmp/lush.nvim", enabled = false, cmd = { "LushImport", "LushRunTutorial", "Lushify" } },
+  { "ayu-theme/ayu-vim", enabled = true },
+  { "projekt0n/github-nvim-theme" },
   --require("themes/modded-gruvbox"),
   {
     "folke/tokyonight.nvim",
-    enabled = true,
     opts = {
       style = "night",
       --transparent = true,
