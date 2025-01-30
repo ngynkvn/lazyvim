@@ -1,0 +1,11 @@
+{
+  "name": "kepp-zig-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "zig",
+        "path": "./zig.json"
+      }
+    ]
+  }
+}

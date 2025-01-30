@@ -1,0 +1,21 @@
+{
+  "Zig Build Dependency": {
+    "prefix": "dep",
+    "body": ["const ${1:name}_dep = b.dependency(\"${1:name}\", .{});"],
+    "description": "Create a build dependency in Zig"
+  },
+  "Zig Build Dependency with Options": {
+    "prefix": "depopt",
+    "body": [
+      "const ${1:name}_dep = b.dependency(\"${1:name}\", .{",
+      "\t${2:// options}",
+      "});"
+    ],
+    "description": "Create a build dependency in Zig with custom options"
+  },
+  "Zig Artifact": {
+    "prefix": "art",
+    "body": ["const ${1:name}_lib = b.artifact(\"${1:name}\", .{});"],
+    "description": "Create a static library"
+  }
+}
