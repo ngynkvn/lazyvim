@@ -15,7 +15,14 @@
   },
   "Zig Artifact": {
     "prefix": "art",
-    "body": ["const ${1:name}_lib = b.artifact(\"${1:name}\", .{});"],
-    "description": "Create a static library"
+    "body": [
+      "const ${1:name}_lib = ${1:name}_dep.artifact(\"${1:name}\", .{});"
+    ],
+    "description": "Fetch an artifact"
+  },
+  "Zig Module": {
+    "prefix": "mod",
+    "body": ["const ${1:name}_lib = ${1:name}_dep.module(\"${1:name}\", .{});"],
+    "description": "Fetch a module"
   }
 }
