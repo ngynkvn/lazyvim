@@ -24,5 +24,10 @@
     "prefix": "mod",
     "body": ["const ${1:name}_lib = ${1:name}_dep.module(\"${1:name}\", .{});"],
     "description": "Fetch a module"
+  },
+  "Zig Build Add Module": {
+    "prefix": "addmod",
+    "body": ["${1:artifact}.addModule(\"${2:name}\", ${2:name}_module);"],
+    "description": "Add a module to an artifact"
   }
 }
