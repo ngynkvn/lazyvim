@@ -2,7 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("i", "<C-x>", vim.lsp.buf.signature_help)
+vim.keymap.set("i", "<C-x>", function()
+  local nldocs = require("noice.lsp.docs")
+  local message = nldocs.get("signature")
+  nldocs.hide(message)
+end)
 
 -- Copy path
 vim.api.nvim_create_user_command("CopyPath", function()
