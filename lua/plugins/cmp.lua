@@ -9,4 +9,5 @@ return {
       signature = { window = { border = "single" } },
     },
   },
+  { "ngynkvn/friendly-snippets", enabled = true },
 }

@@ -1,4 +1,5 @@
 return {
+  { "echasnovski/mini.colors", version = false },
   {
     "echasnovski/mini.align",
     opts = {

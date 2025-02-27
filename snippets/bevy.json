@@ -1,0 +1,21 @@
+{
+  "bevy plugin": {
+    "prefix": "newbp",
+    "body": [
+      "use bevy::prelude::*;",
+      "",
+      "pub struct $1Plugin;",
+      "",
+      "impl Plugin for $1Plugin {",
+      "\tfn build(&self, app: &mut App) {",
+      "\t\tapp.add_systems(Startup, setup)",
+      "\t\t\t.add_systems(Update, update_system);",
+      "\t}",
+      "}",
+      "",
+      "fn setup() {}",
+      "",
+      "fn update_system() {}"
+    ]
+  }
+}

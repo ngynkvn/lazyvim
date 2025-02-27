@@ -1,6 +1,5 @@
 return {
   -- only for editing
-  { "rktjmp/lush.nvim", enabled = false, cmd = { "LushImport", "LushRunTutorial", "Lushify" } },
   { "ayu-theme/ayu-vim", enabled = false },
   { "projekt0n/github-nvim-theme", enabled = false },
   --require("themes/modded-gruvbox"),
