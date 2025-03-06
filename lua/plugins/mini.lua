@@ -1,5 +1,5 @@
 return {
-  { "echasnovski/mini.colors", version = false },
+  { "echasnovski/mini.colors", version = false, opts = {} },
   {
     "echasnovski/mini.align",
     opts = {
