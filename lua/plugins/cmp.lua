@@ -9,5 +9,5 @@ return {
       signature = { window = { border = "single" } },
     },
   },
-  { "ngynkvn/friendly-snippets", enabled = true },
+  { "ngynkvn/friendly-snippets", branch = "me", enabled = true },
 }
