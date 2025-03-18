@@ -15,12 +15,6 @@ return {
     end,
   },
   {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    cmd = "LazyDev",
-    library = { "LazyVim" },
-  },
-  {
     "stevearc/oil.nvim",
     opts = {
       default_file_explorer = true,
