@@ -25,4 +25,8 @@ return {
       -- refer to the configuration section below
     },
   },
+  {
+    "mbbill/undotree",
+    lazy = false,
+  },
 }
