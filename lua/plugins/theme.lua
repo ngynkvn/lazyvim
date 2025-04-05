@@ -8,10 +8,9 @@ return {
     opts = {
       style = "night",
       --transparent = true,
-      transparent = true,
       styles = {
-        sidebars = "transparent",
-        floats = "transparent",
+        -- sidebars = "transparent",
+        -- floats = "transparent",
       },
 
       --- You can override specific highlights to use other groups or a hex color

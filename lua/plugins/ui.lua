@@ -1,4 +1,16 @@
 return {
+  {
+    "ibhagwan/fzf-lua",
+    opts = {
+      winopts = {
+        layout = "horizontal",
+        backdrop = 95,
+        width = 0.9,
+        height = 0.8,
+        row = 0.5,
+      },
+    },
+  },
   { "folke/trouble.nvim", opts = { max_items = false } },
   {
     "akinsho/bufferline.nvim",
