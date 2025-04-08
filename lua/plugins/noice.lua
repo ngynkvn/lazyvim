@@ -3,11 +3,7 @@ return {
   ---@module 'noice'
   ---@param opts NoiceConfig
   opts = function(_, opts)
-    opts.lsp.signature = {
-      auto_open = { enabled = true },
-    }
-    opts.presets.lsp_doc_border = true ---@diagnostic disable-line: assign-type-mismatch
-    opts.presets.long_message_to_split = true ---@diagnostic disable-line: assign-type-mismatch
+    opts.lsp.signature = { auto_open = { enabled = true } }
 
     -- NOTE: The 'find' definitions use Lua pattern matching: https://www.lua.org/pil/20.2.html
     vim.list_extend(opts.routes, {

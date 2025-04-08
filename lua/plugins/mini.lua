@@ -2,16 +2,12 @@ return {
   { "echasnovski/mini.colors", version = false, opts = {} },
   {
     "echasnovski/mini.align",
-    opts = {
-      mappings = {
-        start_with_preview = "ga",
-        start = nil,
-      },
-    },
+    opts = { mappings = { start_with_preview = "ga", start = nil } },
   },
   {
     "echasnovski/mini.starter",
     event = "VimEnter",
+    enabled = false,
     opts = function()
       local logo = require("artifacts.misc")
       local _section = function(name, action, section)
@@ -37,7 +33,7 @@ return {
           starter.gen_hook.adding_bullet("░ ", true),
           starter.gen_hook.aligning("center", "center"),
         },
-        query_updaters = "abcdefghijklmnopqrstuvwxyz0123456789_-.",
+        query_updaters = "abcdefgimnopqrstuvwxyz0123456789_-.",
       }
       return config
     end,

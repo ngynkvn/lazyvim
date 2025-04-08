@@ -2,7 +2,24 @@
 
 return {
   { "ngynkvn/gotmpl.nvim", opts = {}, lazy = true },
-  { "HiPhish/rainbow-delimiters.nvim", main = "rainbow-delimiters.setup", opts = {} },
+  { "ngynkvn/friendly-snippets", branch = "me", enabled = true },
+  {
+    "julienvincent/hunk.nvim",
+    cmd = { "DiffEditor" },
+    config = function()
+      require("hunk").setup()
+    end,
+  },
+  {
+    "saghen/blink.cmp",
+    opts = {
+      completion = {
+        menu = { border = "single" },
+        documentation = { window = { border = "single" } },
+      },
+      signature = { window = { border = "single" } },
+    },
+  },
   {
     "otavioschwanck/arrow.nvim",
     -- TODO: make this lazy
@@ -15,18 +32,5 @@ return {
       })
       return keys
     end,
-  },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
-  },
-  {
-    "mbbill/undotree",
-    lazy = false,
   },
 }
