@@ -33,7 +33,6 @@ return {
           starter.gen_hook.adding_bullet("░ ", true),
           starter.gen_hook.aligning("center", "center"),
         },
-        query_updaters = "abcdefgimnopqrstuvwxyz0123456789_-.",
       }
       return config
     end,

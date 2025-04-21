@@ -4,15 +4,15 @@
 
 -- NOTE: Zig auto fmt: https://zigtools.org/zls/install/#nvim-lspconfig
 -- `vim.cmd [[autocmd BufWritePre *.zig lua vim.lsp.buf.format()]]`
-local zig_augroup = vim.api.nvim_create_augroup("zig-autofmt", {})
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  group = zig_augroup,
-  pattern = { "*.zig" },
-  callback = function()
-    vim.lsp.buf.format()
-  end,
-  desc = "Auto format on save",
-})
+-- local zig_augroup = vim.api.nvim_create_augroup("zig-autofmt", {})
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--   group = zig_augroup,
+--   pattern = { "*.zig" },
+--   callback = function()
+--     vim.lsp.buf.format()
+--   end,
+--   desc = "Auto format on save",
+-- })
 
 -- Turn on relative numbering when in visual mode
 local relnum_augroup = vim.api.nvim_create_augroup("relnum", {})

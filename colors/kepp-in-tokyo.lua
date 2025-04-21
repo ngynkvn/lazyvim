@@ -3,7 +3,7 @@
 if vim.g.colors_name ~= nil then
   vim.cmd("highlight clear")
 end
-vim.g.colors_name = "tokyonight-night-blu"
+vim.g.colors_name = "kepp-in-tokyo"
 
 -- Highlight groups
 local hi = vim.api.nvim_set_hl

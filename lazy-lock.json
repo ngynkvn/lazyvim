@@ -11,7 +11,7 @@
   "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
   "friendly-snippets": { "branch": "me", "commit": "df224b02ff417170e18ee3451ad04b526ff94838" },
   "fzf-lua": { "branch": "main", "commit": "ea2bda8a9717307affd921e1b540dc06acdf8ea8" },
-  "gitsigns.nvim": { "branch": "main", "commit": "02eafb1273afec94447f66d1a43fc5e477c2ab8a" },
+  "gitsigns.nvim": { "branch": "main", "commit": "2149fc2009d1117d58e86e56836f70c969f60a82" },
   "gotmpl.nvim": { "branch": "main", "commit": "7c50c61a1f726d5733df7d8cc6f0dd9324661206" },
   "grug-far.nvim": { "branch": "main", "commit": "1c9325f6ab18fc8ac4d4c57e765aa845af148277" },
   "hunk.nvim": { "branch": "master", "commit": "b475ba0011e4b8ef7d7ddecd9764ee1a5f41366d" },
@@ -48,5 +48,6 @@
   "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" },
   "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
   "ts-comments.nvim": { "branch": "main", "commit": "1bd9d0ba1d8b336c3db50692ffd0955fe1bb9f0c" },
+  "vim-startuptime": { "branch": "master", "commit": "b6f0d93f6b8cf6eee0b4c94450198ba2d6a05ff6" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }
