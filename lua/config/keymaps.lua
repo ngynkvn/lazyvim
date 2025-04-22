@@ -15,8 +15,6 @@ vim.api.nvim_create_user_command("CopyPath", function()
   vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, { desc = "Copy buffer path to clipboard" })
 
-vim.keymap.set("ca", "rl", "RustLsp")
-
 vim.keymap.set("i", "<C-h>", "<Left>")
 vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
