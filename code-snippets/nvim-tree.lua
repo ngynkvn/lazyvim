@@ -1,3 +1,4 @@
+-- Since this is out of the lua folder, it won't load.`
 return {
   "nvim-tree/nvim-tree.lua",
   opts = {

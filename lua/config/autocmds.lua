@@ -2,17 +2,15 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- NOTE: Zig auto fmt: https://zigtools.org/zls/install/#nvim-lspconfig
--- `vim.cmd [[autocmd BufWritePre *.zig lua vim.lsp.buf.format()]]`
--- local zig_augroup = vim.api.nvim_create_augroup("zig-autofmt", {})
--- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
---   group = zig_augroup,
---   pattern = { "*.zig" },
---   callback = function()
---     vim.lsp.buf.format()
---   end,
---   desc = "Auto format on save",
--- })
+vim.opt.fillchars = {
+  horiz = "━",
+  vert = "┃", -- alternatives "│" "┃" "▕"
+  horizdown = "┳",
+  horizup = "┻",
+  vertleft = "┫",
+  vertright = "┣",
+  verthoriz = "╋",
+}
 
 -- Turn on relative numbering when in visual mode
 local relnum_augroup = vim.api.nvim_create_augroup("relnum", {})
@@ -35,12 +33,22 @@ vim.api.nvim_create_autocmd({ "ModeChanged" }, {
   desc = "Hide relative line numbers",
 })
 
-vim.opt.fillchars = {
-  horiz = "━",
-  vert = "┃", -- alternatives "│" "┃" "▕"
-  horizdown = "┳",
-  horizup = "┻",
-  vertleft = "┫",
-  vertright = "┣",
-  verthoriz = "╋",
-}
+local ghostty_augroup = vim.api.nvim_create_augroup("ghostty", {})
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  group = ghostty_augroup,
+  pattern = { "~/.config/ghostty/ghostty" },
+  callback = function() end,
+  desc = "Update ghostty config on save",
+})
+
+-- NOTE: Zig auto fmt: https://zigtools.org/zls/install/#nvim-lspconfig
+-- `vim.cmd [[autocmd BufWritePre *.zig lua vim.lsp.buf.format()]]`
+-- local zig_augroup = vim.api.nvim_create_augroup("zig-autofmt", {})
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--   group = zig_augroup,
+--   pattern = { "*.zig" },
+--   callback = function()
+--     vim.lsp.buf.format()
+--   end,
+--   desc = "Auto format on save",
+-- })
