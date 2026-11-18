@@ -33,14 +33,6 @@ vim.api.nvim_create_autocmd({ "ModeChanged" }, {
   desc = "Hide relative line numbers",
 })
 
-local ghostty_augroup = vim.api.nvim_create_augroup("ghostty", {})
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  group = ghostty_augroup,
-  pattern = { "~/.config/ghostty/ghostty" },
-  callback = function() end,
-  desc = "Update ghostty config on save",
-})
-
 -- NOTE: Zig auto fmt: https://zigtools.org/zls/install/#nvim-lspconfig
 -- `vim.cmd [[autocmd BufWritePre *.zig lua vim.lsp.buf.format()]]`
 -- local zig_augroup = vim.api.nvim_create_augroup("zig-autofmt", {})

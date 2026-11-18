@@ -13,7 +13,6 @@ return {
   },
   {
     "otavioschwanck/arrow.nvim",
-    -- TODO: make this lazy
     opts = { show_icons = true, leader_key = "<leader>h", buffer_leader_key = "m" },
     keys = {
       { "<leader>h", icon = { cat = "filetype", name = "harpoon" }, desc = "Arrow Marks" },
